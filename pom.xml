@@ -546,6 +546,7 @@
     <module>modules/activiti-bpmn-model</module>
     <module>modules/activiti-bpmn-converter</module>
     <module>modules/activiti-engine</module>
+    <module>modules/activiti-cdi</module>
   </modules>
 
   <repositories>
@@ -592,6 +593,21 @@
 
   <build>
     <plugins>
+			<plugin>  
+				<artifactId>maven-source-plugin</artifactId>  
+				<version>2.1</version>
+				<configuration>  
+						<attach>true</attach>  
+				</configuration>  
+				<executions>  
+						<execution>  
+								<phase>compile</phase>  
+								<goals>  
+										<goal>jar</goal>  
+								</goals>  
+						</execution>  
+				</executions>  
+			</plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>2.3.2</version>
